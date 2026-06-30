@@ -55,7 +55,7 @@ FORCE_DEMO_PLAN = False
 # ===== 自迭代 Agent（路线2）相关开关，默认全关，不影响原课堂 demo =====
 SELF_ITERATE = False          # 是否启用 LLM 自迭代抓取回路
 SELF_ITERATE_CODEGEN = False  # stretch：让 LLM 生成策略代码片段（默认仍用调参）
-MAX_ITER_ATTEMPTS = 8         # 自迭代模式下每个物体最多尝试次数（改进：从 4 增加到 8）
+MAX_ITER_ATTEMPTS = 10        # 自迭代模式下每个物体最多尝试次数（改进：从 8 增加到 10，专为 cereal）
 ITER_LOG_PATH = os.path.join(OUTPUT_DIR, "self_iterate_log.jsonl")
 FRONT_CAMERA_NAME = "frontview"
 WRIST_CAMERA_NAME = "robot0_eye_in_hand"
@@ -1723,8 +1723,8 @@ def default_grasp_params(target_name):
     # 形状专属初始值（基于实验观察的失败模式调优）
     if target_name in {"bread"}:           # 平面：抓深 + 夹久
         params.update(z_offset=0.005, close_steps=85, descend_gain=3.2)
-    elif target_name in {"cereal"}:        # 薄盒：最难，更深 + 更久 + 更柔
-        params.update(z_offset=0.0, close_steps=95, descend_gain=2.8)
+    elif target_name in {"cereal"}:        # 薄盒：最难，更深 + 更久 + 更柔 + xy会被网格搜索
+        params.update(z_offset=-0.01, close_steps=100, settle_steps=25, descend_gain=2.5)
     elif target_name in {"milk"}:          # 高圆柱：中段抓，柔下降
         params.update(z_offset=0.03, close_steps=90, descend_gain=3.0)
     elif target_name in {"can"}:           # 矮圆柱：抓深，柔下降
@@ -1772,11 +1772,23 @@ def llm_refine_grasp_params(target_name, history):
             tweaked["z_offset"] = last_params["z_offset"] - 0.015
             tweaked["close_steps"] = last_params["close_steps"] + 10
 
-        # 改进：如果末端没到抓取点，随机探索 xy（针对圆柱体）
+        # 改进：如果末端没到抓取点，系统性 xy 搜索（针对薄盒 cereal）
         if not reached and drift < 0.02:
             import numpy as np
-            tweaked["xy_offset_x"] = last_params.get("xy_offset_x", 0.0) + np.random.uniform(-0.01, 0.01)
-            tweaked["xy_offset_y"] = last_params.get("xy_offset_y", 0.0) + np.random.uniform(-0.01, 0.01)
+            # cereal 用网格搜索：按尝试轮次系统性覆盖 xy 空间
+            if target_name == "cereal":
+                # 5x5 网格：[-0.02, -0.01, 0, 0.01, 0.02]
+                grid = [-0.02, -0.01, 0.0, 0.01, 0.02]
+                attempt = len(history)  # 第几次尝试
+                grid_idx = (attempt - 1) % (len(grid) * len(grid))  # 循环遍历网格
+                x_idx = grid_idx // len(grid)
+                y_idx = grid_idx % len(grid)
+                tweaked["xy_offset_x"] = grid[x_idx]
+                tweaked["xy_offset_y"] = grid[y_idx]
+            else:
+                # 其他物体用随机探索（圆柱体）
+                tweaked["xy_offset_x"] = last_params.get("xy_offset_x", 0.0) + np.random.uniform(-0.01, 0.01)
+                tweaked["xy_offset_y"] = last_params.get("xy_offset_y", 0.0) + np.random.uniform(-0.01, 0.01)
 
         # 改进：drift 大时更快降增益
         if drift > 0.04:

@@ -11,6 +11,10 @@
 [![MuJoCo](https://img.shields.io/badge/MuJoCo-physics-orange.svg)](https://mujoco.org/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
+<img src="assets/demo.gif" width="600" alt="Demo: self-iterating grasp in action"/>
+
+*机械臂在纯物理环境下自主尝试、学习、改进，最终成功抓取*
+
 </div>
 
 ---
