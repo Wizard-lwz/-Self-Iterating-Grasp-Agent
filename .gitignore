@@ -1,0 +1,40 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+.venv/
+venv/
+env/
+
+# ===== 大文件 / 运行产物 =====
+# 视频文件太大，不进 git（README 里放 gif 或外链）
+*.mp4
+*.avi
+*.mov
+# 临时图片
+/home/lwz/robot_view.png
+/home/lwz/robot_verify.png
+*.mp3
+
+# ===== 密钥 / 私密信息（重要！）=====
+.env
+*.key
+secrets.json
+**/api_key*
+
+# ===== 系统文件 =====
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# ===== 实验大日志（保留示例日志，忽略超大的）=====
+outputs/**/*.mp4
+outputs/**/dashboard_last_frame.png

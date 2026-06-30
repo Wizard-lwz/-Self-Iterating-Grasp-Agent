@@ -1,0 +1,25 @@
+# ===== 核心依赖 =====
+# 仿真环境
+robosuite>=1.5.0
+
+# 数值计算与视觉
+numpy>=1.24,<2.0
+opencv-python>=4.8.0
+
+# LLM 调参 / 视觉规划（通义千问）
+dashscope>=1.20.0
+
+# 数据分析与可视化
+matplotlib>=3.7.0
+
+# ===== 可选依赖（语音交互，headless 运行可不装）=====
+# edge-tts>=6.1.0          # 贾维斯 TTS 语音合成
+# pygame>=2.5.0            # 音频播放
+# SpeechRecognition>=3.10  # 麦克风指令识别
+# pyaudio>=0.2.13          # 麦克风输入
+
+# ===== 说明 =====
+# 1. robosuite 依赖 MuJoCo，安装见 https://github.com/ARISE-Initiative/robosuite
+# 2. 自迭代核心功能（--self-iterate）只需上面的核心依赖
+# 3. LLM 调参需设置环境变量 DASHSCOPE_API_KEY；不设则自动回退到启发式微调
+# 4. Python 3.10 测试通过
