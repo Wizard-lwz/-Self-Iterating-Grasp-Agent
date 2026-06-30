@@ -1,21 +1,21 @@
 <div align="center">
 
-# 🤖 Self-Iterating Grasp Agent
+# 🤖 Self-Iterating Grasp Agent#🤖自迭代抓取代理
 
 **一个会从失败中学习、自主改进抓取策略的机械臂 Agent**
 
 *把 "vibe coding" 自动化 —— LLM 读结构化失败反馈，自己改策略，再重投，直到成功*
 
-[![Python](https://img.shields.io/badge/Python-3.10-blue.svg)](https://www.python.org/)
-[![robosuite](https://img.shields.io/badge/robosuite-1.5-green.svg)](https://github.com/ARISE-Initiative/robosuite)
-[![MuJoCo](https://img.shields.io/badge/MuJoCo-physics-orange.svg)](https://mujoco.org/)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.10-blue.svg)](https://www.python.org/)[! [Python] (https://img.shields.io/badge/python - 3.10 blue.svg)] (https://www.python.org/)
+[![robosuite](https://img.shields.io/badge/robosuite-1.5-green.svg)](https://github.com/ARISE-Initiative/robosuite)[] [] (https://img.shields.io/badge/robosuite-1.5-green.svg robosuite !) (https://github.com/ARISE-Initiative/robosuite)
+[![MuJoCo](https://img.shields.io/badge/MuJoCo-physics-orange.svg)](https://mujoco.org/)[] [] (https://img.shields.io/badge/MuJoCo-physics-orange.svg MuJoCo !) (https://mujoco.org/)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)(!(许可证)(https://img.shields.io/badge/License-MIT-yellow.svg))(许可证)
 
-<img src="assets/demo.gif" width="600" alt="Demo: self-iterating grasp in action"/>
+<img src="assets/demo.gif" width="600" alt="Demo: self-iterating grasp in action"/>img src="assets/ Demo .gif" width="600" alt="；Demo：自我迭代把握在行动"；/>；
 
 *机械臂在纯物理环境下自主尝试、学习、改进，最终成功抓取*
 
-</div>
+</div>   < / div>
 
 ---
 
@@ -27,11 +27,11 @@
 
 整个过程在 **纯物理仿真**（关闭演示辅助）下进行，所有信号真实、所有数据开源、失败也如实记录。
 
-<div align="center">
-<img src="assets/progress_comparison.png" width="650"/>
+<div align="center">   <div align="center">
+<img src="assets/progress_comparison.png" width="650"/><img src="assets/progress_comparison.png" width   宽度="650"/>   /比;
 
 *通过系统性调优，纯物理抓取累计解决率 **25% → 50% → 75% → 100%***
-</div>
+</div>   < / div>
 
 ---
 
