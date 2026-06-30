@@ -1,4 +1,4 @@
-<div align="center">
+<div align   对齐   对齐="center"   "center"   "center">   <div align   对齐   对齐="center"   "center"   "center">
 
 # 🤖 Self-Iterating Grasp Agent#🤖自迭代抓取代理
 
@@ -6,8 +6,8 @@
 
 *把 "vibe coding" 自动化 —— LLM 读结构化失败反馈，自己改策略，再重投，直到成功*
 
-[![Python](https://img.shields.io/badge/Python-3.10-blue.svg)](https://www.python.org/)[! [Python] (https://img.shields.io/badge/python - 3.10 blue.svg)] (https://www.python.org/)
-[![robosuite](https://img.shields.io/badge/robosuite-1.5-green.svg)](https://github.com/ARISE-Initiative/robosuite)[] [] (https://img.shields.io/badge/robosuite-1.5-green.svg robosuite !) (https://github.com/ARISE-Initiative/robosuite)
+[![Python](https://img.shields.io/badge/Python-3.10-blue.svg)](https://www.python.org/)[! [Python] (https://img.shields.io/badge/python - 3.10 blue.svg)] (https://www.python.org/)[! [Python] (https://img.shields.io/badge/python - 3.10 blue.svg)] (https://www.python.org/) [!Python (https://img.shields。Io /badge/python - 3.10 blue.svg)] （https://www.python.org/）
+[![robosuite](https://img.shields.io/badge/robosuite-1.5-green.svg)](https://github.com/ARISE-Initiative/robosuite)[] [] (https://img.shields.io/badge/robosuite-1.5-green.svg robosuite !) (https://github.com/ARISE-Initiative/robosuite)[![robosuite](https://img.shields.io/badge/robosuite-1.5-green.svg)](https://github.com/ARISE-Initiative/robosuite)[] [] （https://img.shields.io/badge/robosuite-1.5-green.svg robosuite !）(https://github.com/ARISE-Initiative/robosuite)
 [![MuJoCo](https://img.shields.io/badge/MuJoCo-physics-orange.svg)](https://mujoco.org/)[] [] (https://img.shields.io/badge/MuJoCo-physics-orange.svg MuJoCo !) (https://mujoco.org/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)(!(许可证)(https://img.shields.io/badge/License-MIT-yellow.svg))(许可证)
 
@@ -57,7 +57,7 @@
 | **V2 LLM-tuning** | Qwen-VL 读反馈调参 | 0% (0/4) |
 | **V3 Improved** | 8 轮上限，阈值 0.06m，分级启发式 + xy 探索 | 50% (2/4) |
 | **V4 Shape-aware** | 形状专属初始参数（平面/圆柱/薄盒各异） | 75% (3/4) |
-| **V5 Grid search** | cereal 专属 5×5 网格搜索 + 10 轮 + 更激进初值 | **🏆 100% (4/4)** |
+| **V5 Grid search** | cereal 专属 5×5 网格搜索 + 10 轮 + 更激进初值 | **🏆 100% (4/4)** || **V5 Grid search   V5网格搜索** | cereal 专属 5×5 网格搜索   10 轮   更激进初值 | **🏆 100% (4/4)** |
 
 ### V5 各物体结果（最终版）
 
@@ -65,7 +65,7 @@
 |---|---|---|---|
 | 🍞 bread | 平面 | ✅ | 第 2 轮 |
 | 🥛 milk | 高圆柱 | ✅ | 第 1 轮 |
-| 🥫 can | 矮圆柱 | ✅ | 第 5 轮 |
+| 🥫 can | 矮圆柱 | ✅    对齐| 第 5 轮 |
 | 📦 cereal | 薄盒 | ✅ | **第 1 轮** |
 
 > **突破关键**：cereal（之前最难的薄盒）通过系统性 xy 网格搜索 + 更深抓取（z=-0.01）+ 更柔下降（gain=2.5），**第 1 轮即成功**。证明了结构化探索比随机尝试更高效。
