@@ -1,21 +1,21 @@
-<div align="center">
+<div align   对齐   对齐   对齐="center"   "center"   "center"   "center">   <div align   对齐   对齐   对齐="center"   "center"   "center"   "center"><div align   对齐   对齐   对齐="center"   "center"   "center"   "center">   <div align   对齐   对齐   对齐="center"   "center"   "center"   "center">
 
-# 🤖 Self-Iterating Grasp Agent
+# 🤖 Self-Iterating Grasp Agent#🤖自迭代抓取代理
 
 **一个会从失败中学习、自主改进抓取策略的机械臂 Agent**
 
 *把 "vibe coding" 自动化 —— LLM 读结构化失败反馈，自己改策略，再重投，直到成功*
 
-[![Python](https://img.shields.io/badge/Python-3.10-blue.svg)](https://www.python.org/)
-[![robosuite](https://img.shields.io/badge/robosuite-1.5-green.svg)](https://github.com/ARISE-Initiative/robosuite)
-[![MuJoCo](https://img.shields.io/badge/MuJoCo-physics-orange.svg)](https://mujoco.org/)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.10-blue.svg)](https://www.python.org/)[! [Python] (https://img.shields.io/badge/python - 3.10 blue.svg)] (https://www.python.org/)[! [Python] (https://img.shields.io/badge/python - 3.10 blue.svg)] (https://www.python.org/) [!Python (https://img.shields。Io /badge/python - 3.10 blue.svg)！Python (https://img.shields。Io /badge/python - 3.10 blue.svg)] （https://www.python.org/）[! [Python] (https://img.shields.io/badge/python - 3.10 blue.svg)] (https://www.python.org/) [!Python (https://img.shields。Io /badge/python - 3.10 blue.svg)！Python (https://img.shields。Io /badge/python - 3.10 blue.svg)] (https://www.python.org/)[！Python (https://img.shields。Io /badge/python - 3.10 blue.svg)] (https://www.python.org/) [!]Python (https://img.shields。Io /badge/python - 3.10 blue.svg)] （https://www.python.org/）
+[![robosuite](https://img.shields.io/badge/robosuite-1.5-green.svg)](https://github.com/ARISE-Initiative/robosuite)[] [] (https://img.shields.io/badge/robosuite-1.5-green.svg robosuite !) (https://github.com/ARISE-Initiative/robosuite)[![robosuite](https://img.shields.io/badge/robosuite-1.5-green.svg)](https://github.com/ARISE-Initiative/robosuite)[] [] （https://img.shields.io/badge/robosuite-1.5-green.svg robosuite !）(https://github.com/ARISE-Initiative/robosuite)[![robosuite](https://img.shields.io/badge/robosuite-1.5-green.svg)](https://github.com/ARISE-Initiative/robosuite)[] [] （https://img.shields.io/badge/robosuite-1.5-green.svg robosuite !）（https://github.com/ARISE-Initiative/robosuite）[![robosuite](https://img.shields.io/badge/robosuite-1.5-green.svg)](https://github.com/ARISE-Initiative/robosuite)[] [] （https://img.shields.io/badge/robosuite-1.5-green.svg机器人套件！）（https://github.com/ARISE-Initiative/robosuite）
+[![MuJoCo](https://img.shields.io/badge/MuJoCo-physics-orange.svg)](https://mujoco.org/)[] [] (https://img.shields.io/badge/MuJoCo-physics-orange.svg MuJoCo !) (https://mujoco.org/)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)(!(许可证)(https://img.shields.io/badge/License-MIT-yellow.svg))(许可证)
 
-<img src="assets/demo.gif" width="600" alt="Demo: self-iterating grasp in action"/>
+<img src="assets/demo.gif" width="600" alt="Demo: self-iterating grasp in action"/>img src="assets/ Demo .gif" width="600" alt="；Demo：自我迭代把握在行动"；/>；<img src="assets/demo.gif"   "assets/demo.gif" width="600" alt="Demo: self-iterating grasp in action"/>img src="assets/ Demo .gif" width="600" alt="；Demo：自我迭代把握在行动"；/>；
 
 *机械臂在纯物理环境下自主尝试、学习、改进，最终成功抓取*
 
-</div>
+</div>   < / div>   “DIVA / DIVA / DIVA”。
 
 ---
 
@@ -27,11 +27,11 @@
 
 整个过程在 **纯物理仿真**（关闭演示辅助）下进行，所有信号真实、所有数据开源、失败也如实记录。
 
-<div align="center">
-<img src="assets/progress_comparison.png" width="650"/>
+<div align="center">   <div align="center"><div align   对齐="center"   "center">   <div align   对齐="center"   "center">
+<img src="assets/progress_comparison.png" width="650"/><img src="assets/progress_comparison.png" width   宽度="650"/>   /比;<img src="assets/progress_comparison.png""assets/progress_comparison.png" width="650"/><img src="assets/progress_comparison.png""assets/progress_comparison.png" width   宽度="650"/>   /比;
 
 *通过系统性调优，纯物理抓取累计解决率 **25% → 50% → 75% → 100%***
-</div>
+</div>   < / div>   “DIVA / DIVA / DIVA”。
 
 ---
 
@@ -57,7 +57,7 @@
 | **V2 LLM-tuning** | Qwen-VL 读反馈调参 | 0% (0/4) |
 | **V3 Improved** | 8 轮上限，阈值 0.06m，分级启发式 + xy 探索 | 50% (2/4) |
 | **V4 Shape-aware** | 形状专属初始参数（平面/圆柱/薄盒各异） | 75% (3/4) |
-| **V5 Grid search** | cereal 专属 5×5 网格搜索 + 10 轮 + 更激进初值 | **🏆 100% (4/4)** |
+| **V5 Grid search** | cereal 专属 5×5 网格搜索 + 10 轮 + 更激进初值 | **🏆 100% (4/4)** || **V5 Grid search   V5网格搜索** | cereal 专属 5×5 网格搜索   10 轮   更激进初值 | **🏆 100% (4/4)** |
 
 ### V5 各物体结果（最终版）
 
@@ -65,7 +65,7 @@
 |---|---|---|---|
 | 🍞 bread | 平面 | ✅ | 第 2 轮 |
 | 🥛 milk | 高圆柱 | ✅ | 第 1 轮 |
-| 🥫 can | 矮圆柱 | ✅ | 第 5 轮 |
+| 🥫 can | 矮圆柱 | ✅    对齐| 第 5 轮 |
 | 📦 cereal | 薄盒 | ✅ | **第 1 轮** |
 
 > **突破关键**：cereal（之前最难的薄盒）通过系统性 xy 网格搜索 + 更深抓取（z=-0.01）+ 更柔下降（gain=2.5），**第 1 轮即成功**。证明了结构化探索比随机尝试更高效。
@@ -137,7 +137,7 @@ python compare_heuristic_vs_llm.py outputs/v1_baseline_log.jsonl outputs/v2_llm_
 用户指令
    │
    ▼
-Qwen-VL 规划任务队列 (target → bin)
+Qwen-VL 规划任务队列 (target → bin)Qwen-VL 规划任务队列 (target → bin)
    │
    ▼
 ┌─────────────────────────────────────────┐
@@ -215,9 +215,9 @@ self-iterating-grasp-agent/
 
 ---
 
-## 📜 License
+## 📜 License   # #📜勘探许可证
 
-[MIT](LICENSE)
+[MIT](LICENSE)   MIT [] (LICENSE)
 
 ## 🙏 致谢
 
@@ -225,8 +225,8 @@ self-iterating-grasp-agent/
 
 ---
 
-<div align="center">
+<div align="center">   <div align   对齐="center"   "center">
 
 **这不是 "我跑通了别人的 demo"，而是 "我把 AI 接进了机器人学习回路" 的证明。**
 
-</div>
+</div>   < / div>   “DIVA / DIVA / DIVA”。
